@@ -1,0 +1,684 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Bass boosted Dubstep Visualizer</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="../engineering.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Back to Engineering</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="generic.html">Ipsum veroeros</a></li>
+							<li><a href="generic.html">Tempus etiam</a></li>
+							<li><a href="generic.html">Consequat dolor</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Bass boosted Dubstep Visualizer</h1>
+							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
+							<h1>An electronic board that takes audio input and renders visualisations 
+											on an array of LEDs.</h1>
+							<h4>
+								<br/>Date: December 2017
+								<br/>Course : Introduction to electronics
+								<br/> Location: Harvard University
+								<br/>Software, Tools, Equipment: Arduino, Resistors, Op Amps, Capacitors, Bread boards, 
+								<br/>Team members and contributers: Billy Koech, Bryan Hu
+							</h4>
+
+							<p>
+							Abstract: An LED music visualizer, using a single 9V battery, that displays the real-time amplitudes of the bass, midrange, and treble frequencies of any song plugged into the board. Includes bass-boosting control, an input 3.5mm audio jack, output speakers, an output 3.5mm audio jack, volume control, haptic board vibration, and a bass counter Numitron display.
+							</p>
+							
+
+							<h1>Parts that I was in charge of:</h1>
+							<p>Below are the parts that I contributed to. It's writted in layman terms to accommodate a general audience. More details and specifics on the design can be found below in the design section.</p>
+							<h2>1. </h2>
+
+							<p>Info
+							</p>
+
+							<h2>2. </h2>
+							<p>
+							Info
+							
+							<h2>3. </h2>
+							<p>
+							Info
+							</p>
+							<h2>4. </h2>
+							<p>
+							Info
+							</p>
+
+
+							<h1> 1. Introduction</h1>
+
+
+							<h2> I. Overview</h2>
+
+							<p>Personalized music is an auditory medium that only rarely employs visual or tactile elements. With our bass-boosted LED music visualizer, however, our project brings music to life by combining real-time audio, visuals, and haptic feedback. After all, there’s a reason big concerts employ large, flashy light shows and bass drops you can feel in your bones—to get a multidimensional user experience out of an art form that doesn’t have to be limited to the ears. We’re trying to deliver that experience to the personalized, portable level.
+							</p>
+
+
+
+							<h2>II. Functionality</h2>
+							<p>The visualizer needs 1) a song plugged into the board (through an aux cable) and 2) a 9V power source (e.g. a 9V battery). 
+							<br/>
+							There are six features of our project: 1) speakers, 2) three 8-LED arrays that light up in coordination with the song’s bass, midrange, and treble, 3) a user-controlled bass-boosting knob, 4) a user-controlled total volume knob, 5) a motor that vibrates the board with every bass hit, and finally, 6) a BangerRanker™ Numitron display that counts and displays the number of bass hits—the higher the number, the more of a “banger” (party song) your song is.
+ 
+							</p>
+
+
+
+							<h2>III.  Core Components</h2>
+							<p>
+							The design for the project can be split into six different functional sections:
+							<p>
+
+							<ol>
+								<li>Pseudo-ground (VREF) generator for single-supply design</li>
+								<li>Signal processing and visualization of the bass level</li>
+								<li>Signal processing and visualization of the midrange level</li>
+								<li>Signal processing and visualization of the treble level</li>
+								<li>Bass hit counter, Numitron display, and haptic motor vibration</li>
+								<li>Combining the bass and original audio signals to produce bass-boosted audio output</li>
+							</ol>
+							</p>
+
+
+
+
+							<h1>2. Design</h1>
+							<h2>I. Overview</h2>
+							<p>
+							The Design section will be organized as follows: first, we will present the block diagrams for each of the aforementioned six core functional components, showing the relevant subsections and their relationships to each other. Then we will dedicate a chapter to understanding how we translate from audio through an aux cable to an initial analog voltage signal suitable for manipulation in our circuit. Finally, we will go through each of the six core functional components in detail, following the given structure of its corresponding block diagram.
+							</p>
+
+							<h2>II. Block Diagrams</h2>
+							<p>
+							Below are the block diagrams for each core functional section.
+							</p>
+							<p>{Insert block diagrams here}</p>
+							<p><i>Figure 2.2: Signal processing and visualization of the bass level</i></p> 
+							<p><i>Figure 2.3: Signal processing and visualization of the midrange level</i></p> 
+							<p><i>Figure 2.4: Signal processing and visualization of the treble level (same as midrange)</i></p>
+							<p><i>Figure 2.5: Bass hit counter, Numitron display, and haptic motor vibration</i></p>
+							<p><i>Figure 2.6: Combining the variable gain bass and original audio signals to produce bass-boosted output audio</i></p>
+
+							<h2>III. Understanding the Music Input</h2>
+							<p>
+							We planned to have our music visualizer take in music playing from a phone, a laptop, or any other device through an auxiliary cable. For this reason, before designing the visualizer, we first had to understand the typical frequency range of music, the typical voltage output range coming from the headphone jack of phones and laptops, and how the channels (left and right) of audio coming from the input audio jack work.
+							</p>
+							<h4>A. Typical Frequency of Music</h4>
+							<p>
+							The frequency of audible music ranges from 20Hz to 20KHz. For this project we chose to use three ranges of frequencies for our display:
+							<ol>
+								<li>Bass : 60Hz - 250Hz</li>
+								<li>Midrange: 500Hz - 2kHz</li>
+								<li>Treble: 4kHz - 6kHz</li>
+							</ol>
+							We chose these frequencies because they are likely to occur in songs of different genres.
+							</p>
+							<h4>B. Typical Voltage Output of Audio Devices</h4>
+							<p>
+							Various online forums and websites suggested that the typical output voltage of 3.5mm headphone jacks is between 1.5 V peak-to-peak and 3V peak-to-peak. Because of the variation in values provided online, we decided to measure the voltage coming out of our own phones when playing music at ½ volume, ¾ volume, and maximum volume, so as to obtain accurate values for our design. We measured the left channel of a music signal from a phone. Below is a table with of the recorded data from the measurement:
+							</p>
+							<table>
+								<tr>
+									<th>Volume level</th>
+									<th>Peak-to-peak voltage</th>
+								</tr>
+								<tr>
+									<td>1/2</td>
+									<td>160 mV</td>
+								</tr>
+								<tr>
+									<td>3/4</td>
+									<td>480 mV</td>
+								</tr>
+								<tr>
+									<td>Max volume</td>
+									<td>3.04 V</td>
+								</tr>
+							</table>
+							<p><i>Figure 3.1: Measured voltage values from a 3.5mm jack of an Iphone 6S at different volume levels. Song playing: WizKid - Sound It</i></p>
+
+							<p>We also noticed that the voltage rarely reached or exceeded 3V peak-to-peak. This made 3V a good theoretical choice for us to use as a maximum peak-to-peak input voltage in our subsequent calculations.
+							</p>
+							<p>
+							Having defined 3V as our maximum peak-to-peak input voltage, we designed all subsequent amplifiers within our circuit such that any no signal would exceed a maximum output of 9V peak-to-peak. This is because our circuit runs off of 9V, single-supply, and any music above 9V peak-to-peak would be clipped, which we want to avoid. The implementation of this design choice applies to all op amps used in this project.
+							</p>
+							
+
+							<h4>C. L+R Audio Channels</h2>
+							<p>
+							Smartphones and laptops have the capability of playing audio on two separate channels—left and right. We had no need for distinction of music by channels, but we did want to include all audio and treat it as if it were mono audio. Therefore, we chose to combine the left and right channels using a non-inverting summing op-amp configuration. Below is a schematic of the non-inverting summing op-amp configuration:
+							</p>
+							<p>{Insert Schematic here}</p>
+							<p><i>Figure 3.2: Conversion of stereo to mono using a non-inverting summing op-amp configuration to combine L+R audio with a gain of 1.5</i></p>
+
+							<p>The use of a summing op-amp also gave us the opportunity to amplify our audio signal at the same time. We wanted to amplify our audio signal to the full range for the most accurate measurements in later stages. We chose to amplify at this stage, rather than later, for two reasons: 
+								<ol>
+									<li>To reduce the number of op amps used.</li>
+									<li>To prevent amplification of noise after the signal is later filtered. It is undesirable to amplify after filtering because that would not only amplify the passed signal but also amplify the noise from the filtered signal.</li>
+								</ol>
+							</p>
+							<p>The configuration in Figure 3.2 has a gain of 1.5 and meets the 9V peak-to-peak constraint stated in part B of section III above as per the calculations below: 
+								<ul>
+									<li><i>Maximum Sum of left and right = 3V + 3V = 6V</i></li>
+									<li><i>Amplification of the maximum sum of left and right by 1.5 = 6V * 1.5 = 9V</i></li>
+								</ul>
+							Now that we understand how music is inputted into our board, we move on to examining each functional section in more depth.
+							</p>
+
+							<h2>IV. Single-Supply Design</h2>
+							<p>Since we plan to run our circuit on a 9V battery, we choose to design our project in single supply. In other words, instead of having a range of -9V to +9V, for example, to work with, we are limited to 0V to +9V. This means that we can never have negative voltages and that most analog signals should be now centered around +4.5V, the new midpoint. We now call +4.5V “pseudo-ground” or VREF in the schematic. Below is a circuit that produces +4.5V for the pseudo-ground (VREF) bus:
+							<p><i>Figure 4.1: Pseudo-ground (VREF) generator 9V battery connected to SPDT switch</i></p>
+							Single supply also meant that we had to level-shift the DC levels of all of our audio signals to +4.5V before sending it into our op amps so as to prevent clipping. Below are the schematics of two level shifters—one for the left and the other for right channels of audio: (Level shifting was done before the stereo to mono conversion that we have illustrated in Figure 3.2 of section III above)
+							<p><i>Figure 4.2: Level shifting the DC level of the right channel of our audio signal to 4.5V</i></p>
+							<p><i>Figure 4.3: Level shifting the DC level of the left channel of our audio signal to 4.5V</i></p>
+							</p>
+							<h2>V. Bass Signal Processing & Visualization</h2>
+							<h4>A. 60Hz - 250Hz Bass Bandpass Filter</h4>
+							<p>
+							We need to take in the source audio signal (already combined and amplified, as in part III C) and filter out everything but the bass component. To do this, we need a strong filter that declines steeply outside the passband. The following bandpass filter was designed using analog.com’s Filter Wizard. Below is a schematic produced by analog.com for an active five-stage 60Hz - 250Hz bandpass filter:
+							
+							<p><i>Figure 5.1: Schematic of a 60Hz - 250Hz bandpass filter from analog.com</i></p>
+
+							The filter passed signals between 60Hz and 250Hz and had an attenuation of about -100 db per decade beyond 250Hz and one of 100db per decade below 60Hz. We adapted the design above to suit our parts by replacing the OP281 op amps with LMC6482 op amps, as we had more experience with the LMC6482’s, they were readily available in lab, and they had a sufficient rail-to-rail input range. Below is a schematic of the bass bandpass filter that we built:
+							<p>Figure 5.2: 60Hz - 250Hz bandpass filter based off of a design from analog.com’s Filter Wizard.</p>
+							</p>
+
+							<h4>B. Variable Gain Amplifier for Bass Boosting</h4>
+							<p>
+							We wanted to be able to control the gain of our bass signal, so that the user can “boost” the bass whenever they wanted. Therefore, we designed a variable gain amplifier using an op amp with a maximum gain of 1 and a minimum gain of 0. This enabled us to control the amplitude of the bass signal going beyond this point. Below is a schematic of a variable gain amplifier with an inverting op amp configuration:
+							<p><i>Figure 5.3: Variable gain amplifier with an inverting op amp configuration (range of gain: 0 to 1)</i></p> 
+							</p>
+
+							<h4>C. Single-Slope Analog-to-Digital Converter (ADC)</h4>
+							<p>
+							To display the amplitude of the bass on an array of LEDs, we converted our analog signal into digital. To do this, we designed a single-slope analog-to-digital converter (ADC). The basic idea behind a single-slope ADC is that you compare an analog input waveform that you want to know the decimal level of against a linearly-sloped known reference voltage, and the time it takes for the input signal to cross that slope is proportional to its decimal level at that moment. You compare the input waveform with that slope repeatedly (resetting the sloped line at a fixed speed) to get a rough estimate of its digital level over time.
+							<p><i>Figure 5.4: Converting an analog waveform to digital outputs using a single-slope ADC. Image courtesy of sub.allaboutcircuits.com/images/04268.png</i></p>
+							First, we needed to create our known, repeated slope. We did this by using a resettable non-inverting integrator to integrate a constant voltage, generating a linear slope that rises from 4.5V to 9V. We chose to integrate in this range because we only intended to sample just the top half of our audio signal (which occurs between 4.5V and 9V), rendering only the top half of the slope useful to us. Only the top half of the signal is necessary to digitize because we want to know the max level of the bass signal anyway, which always occurs in the top half, never in the bottom half. In addition, we chose the non-inverting configuration, rather than the inverting configuration we’ve seen in lab, because we needed a positive slope. 
+							</p>
+							<p>
+							We intended to acquire at least 3 samples per wave for any frequency of bass, as this would provide us with sufficient resolution to ensure we weren’t missing any waves. Since the highest theoretical passed frequency of our bass signal is 250 Hz as per the specification of our bass passband filter (Section V part A), our sampling frequency was thus chosen to be 3*250Hz = 750Hz. From our chosen sampling frequency, we were able to determine the RC integration time for our integrator:
+							<ul>
+								<li>1/750hz = 0.00133 sec = 1.33 milliseconds = R*C</li>
+							</ul>
+							This means that it will take our integrator 1.33 milliseconds to rise from 4.5V to 9V in a linear fashion .Below is a schematic of the non-inverting resettable integrator:
+
+							<p><i>Figure 5.5: non-inverting resettable integrator that integrates from 4.5V to 9V in 1.33mSec</i></p>
+
+							The slope from the integrator was then compared to the output of the variable gain amplifier that we have talked about in section V part B above using a LM311 comparator. We chose the LM311 over the LMC6482 because we need to set the output at 0V (low) and +5V (high) for the subsequent digital circuit whilst still taking in a signal between 0 and 9V, which the LM311 can do, but the LMC6482 cannot.
+							</p>
+							<p>
+							Using the ADC in the above manner also means we needed to reset the non-inverting integrator every 1.33mSec. To do this, we built a 6kHz clock using an LMC555 timer and used a 4 bit counter to divide that frequency by 8 so as to achieve a 750Hz clock, which we then hooked up to a digital switch that resets the necessary capacitors at the desired rate. The capacitors, when shorted, reset essentially instantaneously, so the ramp would be reset back to 4.5V and the integration would repeat. Note: We decided to build a 6kHz clock and not just a 750Hz clock right off the bat because we’ll need the 6kHz clock later anyway. (In particular, the 6kHz clock shifts in data to light the 8 LEDs through a shift register, as we’ll discuss later.) Below is a schematic of the LMC555 timer and the divide-by-8 counter:
+
+							<p><i>Figure 5.6: LMC555 timer that produces a 6kHz clock and a divide-by-8 counter that produces a 750Hz clock</i></p>
+
+							The 750Hz clock was then connected to a digital switch (74HC4316) that allowed us to short the two capacitors in the integrator at the same time. Below is a schematic of the non-inverting integrator with the 74HC4316 digital switch:
+
+							<p><i>Figure 5.7: non-inverting integrator connected to a 74HC4316 digital switch</i></p>
+
+
+							At first, we designed the ADC to produce a 3-bit encoded output using a 4-bit counter. The output runs from 0002 to 1112 in binary (i.e. 0 to 7 in decimal). But this posed the problem of decoding the output, i.e. putting it in a displayable form, because for a given number, we want that particular LED to light up and light up all the LEDs below it. For example, if the output is zero (the lowest), we want just the first LED lit up, but if the output is 7 (the highest), we want all eight LEDs lit up. (This will create the audio visualizer “wave”, which is more visually pleasing than a single dot moving around.)
+
+							</p>
+							<p>
+							Still trying to implement a 4-bit counter this way, we first tried using a logic table, but that quickly got too complicated (an inordinate amount of NAND gates would have to be used). Then, we tried using a 3-bit-to-8-line converter available in lab, which would easily turn our 3-bit binary outputs into the corresponding decimal position (i.e. 0002 to 10000000 and 1112 to 00000001), but again, there was no clear way to light up more than a single LED in the way that we wanted, even with the converted 8-line parallel output.
+							</p>
+							</p>
+
+							<h4>D. Shift Register</h4>
+
+							<p>Fortunately, after discussing with our ES52 instructor, we adopted a simpler design without any binary counting that allowed us to achieve our desire of lighting up more than a single LED at a time. Our selected design involved the use of a shift register in place of a 4-bit counter (i.e. no more counter and no more 3-to-8 converter). We fed the 6kHz clock into the clock pin of the 74HC595 shift register and fed the output of the comparator into the data pin. This allowed us to display shifted data on multiple LEDs if the input data of the shift register had been HIGH for more than one rising edge of the 6kHz clock. 
+							</p>
+							<p>
+							In this design, we shifted in HIGH when the comparator output was +5V, then latched the output of the shift register when the output of the comparator changed to LOW, i.e. when the input waveform crossed the integrated slope. For example, if the output of the comparator was HIGH for 6 clock cycles, then instead of having a counter count up to 6 or 1102 in binary as originally intended, we simply shifted in 6 HIGHs through the shift register, turning on only the first 6 LEDs. As soon as the output of the comparator went LOW, we latched that value so that the LEDs would stay in the first six slots, otherwise zeros would be shifted in and the 6 LEDs would be pushed to the other side of the array.
+							</p>
+							<p>
+							Then, everything, including both the integrator and shift register, is reset at a 750Hz rate. The cycle then begins anew after the next time that the input waveform goes higher than the integrated slope, as new HIGHs are shifted in for another set amount of time. We used the 750Hz clock to thus reset the shift register at the same time that we reset the integrator (as above). Below is a schematic of the combination of the non-inverting integrator, the 74HC4316 digital reset switch, the LM311 comparator and the 74HC595 shift register that make up the single-slope ADC:
+
+							<p><i>Figure 5.8: single slope ADC (74HC4316 digital reset switch, LM311 comparator and the 74HC595 shift register)</i></p>
+
+
+							</p>
+
+							<h4>E. Display Bass Amplitude on an 8-LED Array</h4>
+							<p>
+							The output pins of the shift register were then connected to 8 big red LEDs with forward voltages of about 2V. We then chose to drive 10mA through them because 10mA provided sufficient brightness for our purposes. This current was set by a current limiting resistor of 300Ω. Figure 5.8 above shows the resistors and the LEDs connected to the output of the 74HC595 shift register.
+							</p>
+
+							<h2>VI.  Midrange Signal Processing & Visualization</h2>
+							<h4>A. 500Hz - 2kHz Midrange Bandpass Filter</h4>
+							<p>
+							Just as in the bass section, we now go back to the start and take the L+R combined and amplified source audio signal (from Section III C) and take it down another path. This time, we filter out everything but the midrange frequencies with the aim of eventually displaying their levels. To do this, we designed the midrange bandpass filter using one low pass filter that passes frequencies lower than 2KHz and one high pass filter that passes frequencies higher than 500Hz. Below is the schematic for the bandpass filter:
+							</p>
+							<p><i>Figure 6.2: Schematic of the 500Hz - 2kHz midrange bandpass filter</i></p>
+							<h4>B. AC Coupling</h4>
+							<p>Similar to how we handled the passed bass signal, we now want to convert our analog midrange signal to a digital signal to display on another 8-LED array. Whereas we did this previously in hardware using a single-slope ADC, we now handle the midrange signal in software, e.g. by connecting the output of our midrange signal to an analog input pin of an Ardunio µController. From there, we can use the µController to do whatever we want—in this case, mapping the analog level to a series of digital outputs.
+							</p>
+
+							<p>
+							However, there’s one thing we need to do first. An analog input pin of an Arduino µController only reads voltages between 0 and +5V, yet the voltage of our analog signal ranges between 0V and +9V. For this reason, in order to fit our signal into this range without using a +2.5V secondary pseudo-ground (which would get unnecessarily complicated), we used an AC coupling circuit so as to remove the DC levels of the audio signal. This centered the midrange signal back around 0V, cutting off signals below 0V. This is fine, because as always, we only care about the top half of the signal, as that is where the maximum will always lie. Then, the new “grounded” signal will range from 0 to +4.5V (imagine the top half of the original signal—4.5V to 9V—sitting on ground), which is usable by the µController.
+							</p>
+
+							<p>
+							Furthermore, because an AC coupling circuit acts like a high pass filter, we chose a critical frequency fc of 50Hz because it is ten times less than the lowest frequency of our passed midrange, 500Hz, as specified in the midrange filter (section IV part A) above. We chose this value to be away from our critical frequency because the point of this circuit is to strip DC, not attenuate the signal. Below is the schematic of the AC coupling circuit:
+							</p>
+							<p><i>Figure 6.3: AC coupling circuit for the midrange with fc of 50Hz</i></p>
+
+							<h4>C.  Leaky Peak Detector</h4>
+							<p>
+							We then decided to average the values of peaks of the midrange signal using a leaky peak detector. To choose the RC values for the leaky peak detector we considered the period of the lowest frequency of the midrange, 500Hz.
+
+								<ul>
+									<li>Period = 1/500Hz = 2 milliseconds</li>
+								</ul>
+
+							From the above value, we understood that our RC time constant needed to be much greater than 2 milliseconds yet less than the time it takes for the amplitude to decrease to a lower peak value. Based on this constraint, we arbitrarily chose 100 milliseconds. Finally, we used an SD103 diode due to its low forward voltage, minimizing voltage loss. Below is the schematic of the leaky peak detector for the midrange:
+							
+							<p><i>Figure 6.4: Leaky peak detector circuit for midrange with RC time constant of 100mSec</i></p>
+							The output of the leaky peak detector is then connected to an analog input pin (pin A5, as denoted in our code) of an Arduino µController.
+
+							</p>
+							<h4>D. Arduino µController & Shift Register</h4>
+							<p>
+							We are now ready to display the analog level of the midrange on an array of 8 LEDs by using the Arduino µController. We already know that we will be using one input pin (A5). To minimize the number of Arduino output pins that we use, we chose to use a shift register and just one digital output pin. We chose the TLC5916 shift register because it is a constant current driver whose output current can be defined by a resistor connected to its R-EXT pin. 
+							</p>
+
+							<p>
+							We determined the desired current level by connecting one of the yellow LEDs to the power supply and incrementally adjusting the amount of current provided across the LED, which demonstrated that a current of about 10mA provided sufficient brightness for our purposes. Therefore, our choice of resistor value for R-EXT could be calculated from this Iout value and from the formula provided by the datasheet of the TLC5916:
+							<ul>
+								<li>R-EXT = (1.25/IOUT) * 15</li>
+								<li>R-EXT = (1.25/[10E-3 A]) * 15</li>
+								<li>R-EXT = 1875Ω</li>
+								<li>Value chosen for R-EXT= 1.8㏀</li>
+							</ul>
+							<p><i>Note: a slightly smaller R-EXT value than theoretically desired means a slightly higher current than desired, which is fine; 10mA is not an absolute maximum value.</i></p>
+
+							The TLC5916 also has a serial data out (SDO) pin, which is convenient to our design, because we still need another shift register for the treble display, as we will discuss below in section VII. Below is the schematic of the Arduino µController connected to two TLC5916 shift registers:
+							</p>
+
+							<p><i>Figure 6.5: Arduino µController connected to two TLC5916 shift registers for the midrange and treble</i></p>
+
+							<h4>E. Display Midrange Amplitude on an 8-LED Array</h4>
+							<p>
+							To minimize redundancy, we will postpone discussion of the specific code within the Arduino and the discussion of the midrange 8-LED array until the next section. This is because much of the code involved in the display for the midrange was abstracted and combined with that of the treble level. In addition, the midrange and treble displays are closely linked and require a discussion of code and therefore will be described all together in the next section.
+							</p>
+							<h2>VII.  Treble Signal Processing & Visualization</h2>
+							<p>
+							<i>
+							Please note that many of the early subsections of the Treble section are similar to their counterparts in the Midrange section.</i>
+							</p>
+							<h4>A. 4kHz - 6kHz Treble Bandpass Filter</h4>
+							<p>
+							We designed the treble filter with the help of analog.com’s Filter Wizard. The filter is designed to take in the original combined L+R signal from way back in section III C and pass frequencies between 4kHz and 6kHz. It should attenuate frequencies higher than 6kHz by about ~dB and attenuate frequencies lower than 4KHz by about ~dB. Below is the schematic generated by analog.com:
+							</p>
+							<p>Figure 7.1: Schematic of a 4kHz - 6kHz treble bandpass filter generated by analog.com’s Filter Wizard.</p>
+							<p>
+							Just as before, we adapted the design from analog.com to suit our parts by replacing all the op amps with LMC6482 op amps and connecting the REF terminals to our pseudo-ground (VREF).
+							</p>
+							<p><i>Figure 7.2: Schematic of a 4kHz - 6kHz treble bandpass filter based off of a design from analog.com’s filter wizard.</i></p>
+
+							<h4>B. AC Coupling </h4>
+							<p>
+							Just like with the midrange, we need to AC couple of the output of the treble filter. Please refer back to the AC Coupling section of the Midrange section (Section V B) for a more detailed description of why we need AC coupling. 
+							</p>
+							<p>
+							In this case, we choose our fc to be 10 times less than the frequency of the lowest treble frequency (4kHz). Thus our fc becomes 400Hz to ensure that none of the frequencies between 4kHz and 6kHz are attenuated. Below is the schematic of the AC coupling for the treble:
+							</p>
+							<h4>C. Leaky Peak Detector</h4>
+							<p>
+							Just like with the midrange, we now use a leaky peak detector to average the peak values before connecting the circuit to an input pin of the Arduino µController. We used the same RC time constant of 100 milliseconds because the period of the lowest passed treble frequency (4kHz) is 0.025 milliseconds and much less than the 100 millisecond time constant. Below is the schematic for the treble leaky peak detector:
+							
+							<p><i>Figure 7.4: Treble leaky peak detector</i></p>
+							</p>
+
+							<h4>D. Arduino µController & Shift Register</h4>
+							<p>
+							To minimize the number output pins needed to drive 8 LEDs, the treble display was also implemented using the TLC5916 shift registers. This second shift register was connected to the serial data out (SDO) of the midrange shift register and it shared the same clock pin and latch pin as the first shift register; thus, no additional Arduino output pins were required outside of those attached to the first shift register. 
+							</p>
+							<p>
+							The only difference between the midrange circuit and the treble circuit was the color of the LEDs. Treble used green LEDs while midrange used yellow LEDs. Nonetheless, both TLC5916 used the same 1.8㏀ resistors to drive a constant current of about 10mA.
+
+							<p><i>Figure 7.5: Arduino µController connected to TLC5916 shift registers for both treble and midrange. Note: this is the same as figure 6.5</i></p>
+							</p>
+
+							<h4>E. Display Midrange & Treble Amplitude on an 8-LED Array using Arduino Code</h4>
+							<p>
+							We now dissect, piece by piece, the code in the Arduino that will drive both shift registers and light up both LED arrays. 
+							</p>
+							<p>
+							Note: Before implementing our actual LED-lighting function, we created several smaller global functions, with useful names, for our final function inside loop()to use.
+
+							<p><i><b>Step 1. Mapping the analog inputs from the input pins into digital levels.</b></i></p>
+
+							Converting analog to digital in Ardunio code is nice because the Arduino software basically does it all for us. This process requires two functions: analogRead() and map(). Thus, we read both our analog midrange signal, which was connected to pin A5, and our analog treble signal, which was connected to pin A4, and pass those into map() separately, which will return a digital value we can use.
+							</p>
+							<p>
+							First up is using the analogRead() function, which will “read” our midrange and treble signals and return a value between 0 and 1023 corresponding linearly with analog values between 0V and +5V, as per the online Ardunio Reference page. Then, we map that number to a range of 1 to 8, corresponding to how many LEDs we want lit up. For example, 0V would be read as 0, which would be mapped to 1, and only the bottom-most LED would be lit up. Conversely, +5V would be read as 1023, which would be mapped to 8, and all of the LEDs would be lit up.
+							</p>
+							<p>
+							However, there’s one small quick fix to make before moving on: the output signal of the AC coupling for both midrange and treble only ranges from 0 to +4.5V instead of the expected 0 to +5V. To ensure that we’re including the highest LED, we tweak our mapping values. [0 - 5] → [0 - 1023] → [1 - 8] now becomes [0 - 4.5] → [0 - ?] → [1 - 8], where we solve for the question mark by proportionally reducing the highest input mapping value:
+
+							<ul>
+								<li>5/1023 = 4.5/?</li>
+								<li>? = (4.5/5) * 1023 ≈ 920</li>
+
+							</ul>
+
+							Now an input voltage of +4.5V, corresponding to 920, maps out to 8 and lights up all the LEDs, as desired.
+
+							</p>
+							<p>
+							We made two separate small global functions to do the above:
+							</p>
+
+							<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #408080; font-style: italic">//function that maps midrange input</span>
+<span style="color: #B00040">int</span> <span style="color: #0000FF">midrangeLevel</span>(){
+  <span style="color: #B00040">int</span> amplitude <span style="color: #666666">=</span> analogRead(MIDRANGE_INPUT);
+  amplitude <span style="color: #666666">=</span> map(amplitude, <span style="color: #666666">0</span>, <span style="color: #666666">920</span>, <span style="color: #666666">1</span>, <span style="color: #666666">8</span>);
+  <span style="color: #008000; font-weight: bold">return</span> amplitude;
+}
+
+<span style="color: #408080; font-style: italic">//function that maps treble input</span>
+<span style="color: #B00040">int</span> <span style="color: #0000FF">trebleLevel</span>(){
+  <span style="color: #B00040">int</span> amplitude <span style="color: #666666">=</span> analogRead(TREBLE_INPUT);
+  amplitude <span style="color: #666666">=</span> map(amplitude, <span style="color: #666666">0</span>, <span style="color: #666666">920</span>, <span style="color: #666666">1</span>, <span style="color: #666666">8</span>);
+  <span style="color: #008000; font-weight: bold">return</span> amplitude;
+</pre></td></tr></table></div>
+	
+							<p>
+							We now create another small function called risingEdge() that just takes in a clock pin number and simply creates a rising edge on that clock pin. We will later use this to seamlessly shift in data into the shift registers by calling risingEdge() rather than coding two digitalWrite() lines every single time.
+							</p>
+							<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
+2
+3
+4
+5</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #408080; font-style: italic">//Rising edge for for any clock pin</span>
+<span style="color: #B00040">void</span> <span style="color: #0000FF">risingEdge</span>(<span style="color: #B00040">int</span> clockPin){
+    digitalWrite(clockPin, LOW);     <span style="color: #408080; font-style: italic">// falling edge</span>
+    digitalWrite(clockPin, HIGH);    <span style="color: #408080; font-style: italic">// rising edge</span>
+}
+</pre></td></tr></table></div>
+							<p>
+							<p><i><b>Step 2. Writing a function to shift out the proper data to the corresponding 8-LED arrays.</b></i></p>
+							We then leveraged risingEdge() to create a function called turnLEDOn() that takes two integer parameters—the midrange 1-8 level and the treble 1-8 level—and then lights up both arrays of LEDs through the shift registers at once.
+							</p>
+							<p>
+							For example, if LEDNumMidrange is 5 and LEDNumTreble is 2, we pass those numbers into  turnLEDOn(), which shifts 5 HIGH (on LEDs) and then 3 LOW (off LEDs) into the midrange array, and then shifts 2 HIGH (on LEDs) and then 6 LOW (off LEDs) into the treble array, all in one fell swoop:
+							</p>
+							<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #408080; font-style: italic">//function that lights up 8 midrange LEDs and 8 treble LEDs</span>
+<span style="color: #B00040">void</span> <span style="color: #0000FF">turnLEDOn</span>(<span style="color: #B00040">int</span> LEDNumMidrange, <span style="color: #B00040">int</span> LEDNumTreble){
+
+
+      <span style="color: #408080; font-style: italic">//shift in value of midrange</span>
+      digitalWrite(DATA_PIN, HIGH);    <span style="color: #408080; font-style: italic">//data high</span>
+      <span style="color: #008000; font-weight: bold">for</span>(<span style="color: #B00040">int</span> i <span style="color: #666666">=</span> <span style="color: #666666">0</span>; i<span style="color: #666666">&lt;</span>LEDNumMidrange; i<span style="color: #666666">++</span>){
+        risingEdge(CLK_PIN);
+      }
+        
+      <span style="color: #408080; font-style: italic">//shift in zeros for unreached level of midrange</span>
+      digitalWrite(DATA_PIN, LOW);    <span style="color: #408080; font-style: italic">//data low</span>
+      <span style="color: #008000; font-weight: bold">for</span>(<span style="color: #B00040">int</span> i <span style="color: #666666">=</span> <span style="color: #666666">0</span>; i<span style="color: #666666">&lt;</span>(<span style="color: #666666">8-</span>LEDNumMidrange); i<span style="color: #666666">++</span>){
+        risingEdge(CLK_PIN);
+      }
+        
+      <span style="color: #408080; font-style: italic">//shift in value of treble</span>
+      digitalWrite(DATA_PIN, HIGH);     <span style="color: #408080; font-style: italic">//data high</span>
+      <span style="color: #008000; font-weight: bold">for</span>(<span style="color: #B00040">int</span> i <span style="color: #666666">=</span> <span style="color: #666666">0</span>; i<span style="color: #666666">&lt;</span>LEDNumTreble; i<span style="color: #666666">++</span>){
+        risingEdge(CLK_PIN);
+      } 
+
+      <span style="color: #408080; font-style: italic">//shift in zeros for unreached level of treble</span>
+      digitalWrite(DATA_PIN, LOW);    <span style="color: #408080; font-style: italic">//data low</span>
+      <span style="color: #008000; font-weight: bold">for</span>(<span style="color: #B00040">int</span> i <span style="color: #666666">=</span> <span style="color: #666666">0</span>; i<span style="color: #666666">&lt;</span>(<span style="color: #666666">8-</span>LEDNumTreble); i<span style="color: #666666">++</span>){
+        risingEdge(CLK_PIN);
+      }
+}
+</pre></td></tr></table></div>
+
+							<p>
+							We then called turnLEDOn() inside loop() and passed in the corresponding amplitude levels of midrange and treble from the midrangeLevel()function and the trebleLevel()function, which constantly monitor the A4 and A5 analog input pins:
+							</p>
+							<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
+2</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #408080; font-style: italic">//display midrange and treble level on array of LEDs</span>
+   turnLEDOn(midrangeLevel(), trebleLevel());
+</pre></td></tr></table></div>
+
+							<p><i><b>Challenge faced: rapid flickering of LEDs due to data being shifted in rapidly</b></i></p>
+							<p>
+							We noticed our unlit LEDs would flicker rapidly. We figured this was due to data being shifted into the shift registers at a rapid rate. Therefore, we incorporated a latch inside loop() to slow down the rate of flickering. In the code below LEDDisplayTime is declared as const unsigned long HapticFeedbackTime = 200;
+							</p>
+							<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #408080; font-style: italic">//decrease amount of flickering by latching value for LEDDisplayTime milliseconds</span>
+  <span style="color: #008000; font-weight: bold">if</span>(digitalRead(LATCH_PIN) <span style="color: #666666">==</span> HIGH){  <span style="color: #408080; font-style: italic">//if not latched</span>
+    LatchStart <span style="color: #666666">=</span> millis();              <span style="color: #408080; font-style: italic">//set time when latched</span>
+  }
+  
+  digitalWrite(LATCH_PIN, LOW); <span style="color: #408080; font-style: italic">//activate latch(active low)</span>
+
+
+<span style="color: #408080; font-style: italic">//only deactivate latch when LEDDisplayTime has elapsed</span>
+  <span style="color: #008000; font-weight: bold">if</span>(millis() <span style="color: #666666">&gt;</span> LatchStart <span style="color: #666666">+</span> LEDDisplayTime){   
+    digitalWrite(LATCH_PIN, HIGH); <span style="color: #408080; font-style: italic">//deactivate latch</span>
+  }
+</pre></td></tr></table></div>
+
+							<p>We implemented the above code in this manner instead of using delay() so as to to keep other processes from being halted.</p>
+
+							<h2>VIII.  Bass Hit Counter, Numitron Display, & Haptic Feedback</h2>
+							<p>
+							The next part of our circuit is entirely based (pun intended) off the bass signal. Using the bass signal alone, we will drive a counter that counts how many times the bass goes beyond a certain threshold, display that number on a Numitron, and drive a motor everytime the bass goes above that threshold.
+							</p>
+							<h4>Comparator with Adjustable Hysteresis</h4>
+							<p>
+							To detect the bass beats, we built a comparator to compare the amplitude of the bass against a constant threshold voltage with adjustable hysteresis. We used hysteresis so as to minimize the amount of signal bouncing that would occur as the input bass waveform approached the threshold voltage due to noise. We used a potentiometer to provide us with a range of adjustability to experimentally find a “sweet spot” of hysteresis that provided us with a reasonable amount of detection.
+							</p>
+							<p><i>Figure 8.1: Schematic for bass hit detector with variable hysteresis</i></p>
+
+							<h2>Ardunio µController, Shift Registers, & Seven-Segment Numitron Displays</h2>
+							<p>
+							Now that we have a digital signal (either 0V or +5V from the comparator) based on whenever the bass crosses a predefined threshold, we can now use the Arduino µController to 1) count the bass and 2) drive the Numitron. Before explaining how the bass counter was implemented in code, we first establish how the display circuit has been designed.
+							</p>
+							<p>
+							The display circuit involved two 4-bit counters. Each clock pin of the two counters was connected to a separate Arduino digital output pin. The reset pins of the two counters were then shorted and connected to a single Arduino digital output pin; this allowed the counts of the two counters to be controlled individually and reset at the same time. We wanted to be able to reset immediately; therefore, we used the 74HC161 counters, which have an asynchronous clear. These two counters were then connected to two separate 3-bit-to-7 segment decoders (LS247). These decoders were then connected to two separate Numitron displays. Below is a schematic of the display circuit:
+							
+							<p><i>Figure 8.2: Schematic for the bass beat counter display</i></p>
+							</p>
+
+							<p>Now we examine the code used in the Arduino to count the bass beats:</p>
+							<p><i><b>Step 1. Counting beats using an Interrupt Service Routine</b></i></p>
+							<p>
+							We implement our counter for the bass hits using an Interrupt Service Routine (ISR) because it is faster than digitalWrite(). We start by naming our boolean ISR flag BeatDetected, which is initially set to be false, and change its value from false to true whenever a rising edge is detected from the bass input pin (which we have called the BASS_PIN). We then initialize a new variable called BeatCntr to zero in setup() and constantly monitor the flag, BeatDetected, in loop(). Whenever the flag is set to true, i.e. a beat is detected, the beat counter BeatCntr increments by one in the loop. The flag is then reset to false and loop() goes back to constantly monitoring the BeatDetected flag. Below is the code showing how we attach the ISR and how we reset the beat counter in setup():
+							</p>
+							<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
+2
+3
+4</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #408080; font-style: italic">//attach interrupt to Bass input pin</span>
+attachInterrupt(digitalPinToInterrupt(BASS_PIN), setISRFlag, RISING);
+
+BeatCntr <span style="color: #666666">=</span> <span style="color: #666666">0</span>; <span style="color: #408080; font-style: italic">//initiate variable to hold number of counts</span>
+</pre></td></tr></table></div>
+
+							
+							<p>Function that sets ISR flag:</p>
+
+							<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
+2
+3
+4</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #408080; font-style: italic">//ISR function</span>
+<span style="color: #B00040">void</span> <span style="color: #0000FF">setISRFlag</span>(){
+  BeatDetected <span style="color: #666666">=</span> <span style="color: #008000">true</span>;
+}
+</pre></td></tr></table></div>
+
+
+							<p>Function that is inside loop() to increment BeatCntr and to clear the ISR flag:</p>
+
+
+							
+
+							
+
+							<h1>Assembly Process</h1>
+							<h2>Chassis</h2>
+							<h2>Steering</h2>
+							<h2>Suspension</h2>
+							<h2>Transmission</h2>
+							<h2>Braking</h2>
+
+							<h1>Challenges</h1>
+							<h2>Steering</h2>
+							<h2>Suspension</h2>
+							<h2>Transmission</h2>
+							<h2>Braking</h2>
+
+							<h1>Outlook and Improvement for the Future</h1>
+							<h2>Power steering and autonomous driving</h2>
+							<h2>Transmission </h2>
+							<h2>General project planning</h2>
+
+
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="#">
+									<div class="field half first">
+										<input type="text" name="name" id="name" placeholder="Name" />
+									</div>
+									<div class="field half">
+										<input type="email" name="email" id="email" placeholder="Email" />
+									</div>
+									<div class="field">
+										<textarea name="message" id="message" placeholder="Message"></textarea>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="special" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
+									<li><a href="#" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="#" class="icon style2 fa-500px"><span class="label">500px</span></a></li>
+									<li><a href="#" class="icon style2 fa-phone"><span class="label">Phone</span></a></li>
+									<li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
