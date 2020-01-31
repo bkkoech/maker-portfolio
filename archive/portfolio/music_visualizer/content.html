@@ -88,7 +88,7 @@
 							<p>
 							Info
 							</p>
-
+<!--
 
 							<h1> 1. Introduction</h1>
 
@@ -415,7 +415,7 @@
 							We made two separate small global functions to do the above:
 							</p>
 
-							<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+							<div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
  2
  3
  4
@@ -443,7 +443,7 @@
 							<p>
 							We now create another small function called risingEdge() that just takes in a clock pin number and simply creates a rising edge on that clock pin. We will later use this to seamlessly shift in data into the shift registers by calling risingEdge() rather than coding two digitalWrite() lines every single time.
 							</p>
-							<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
+							<div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
 2
 3
 4
@@ -460,7 +460,7 @@
 							<p>
 							For example, if LEDNumMidrange is 5 and LEDNumTreble is 2, we pass those numbers into  turnLEDOn(), which shifts 5 HIGH (on LEDs) and then 3 LOW (off LEDs) into the midrange array, and then shifts 2 HIGH (on LEDs) and then 6 LOW (off LEDs) into the treble array, all in one fell swoop:
 							</p>
-							<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+							<div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
  2
  3
  4
@@ -520,7 +520,7 @@
 							<p>
 							We then called turnLEDOn() inside loop() and passed in the corresponding amplitude levels of midrange and treble from the midrangeLevel()function and the trebleLevel()function, which constantly monitor the A4 and A5 analog input pins:
 							</p>
-							<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
+							<div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
 2</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #408080; font-style: italic">//display midrange and treble level on array of LEDs</span>
    turnLEDOn(midrangeLevel(), trebleLevel());
 </pre></td></tr></table></div>
@@ -529,7 +529,7 @@
 							<p>
 							We noticed our unlit LEDs would flicker rapidly. We figured this was due to data being shifted into the shift registers at a rapid rate. Therefore, we incorporated a latch inside loop() to slow down the rate of flickering. In the code below LEDDisplayTime is declared as const unsigned long HapticFeedbackTime = 200;
 							</p>
-							<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+							<div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
  2
  3
  4
@@ -581,7 +581,7 @@
 							<p>
 							We implement our counter for the bass hits using an Interrupt Service Routine (ISR) because it is faster than digitalWrite(). We start by naming our boolean ISR flag BeatDetected, which is initially set to be false, and change its value from false to true whenever a rising edge is detected from the bass input pin (which we have called the BASS_PIN). We then initialize a new variable called BeatCntr to zero in setup() and constantly monitor the flag, BeatDetected, in loop(). Whenever the flag is set to true, i.e. a beat is detected, the beat counter BeatCntr increments by one in the loop. The flag is then reset to false and loop() goes back to constantly monitoring the BeatDetected flag. Below is the code showing how we attach the ISR and how we reset the beat counter in setup():
 							</p>
-							<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
+							<div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
 2
 3
 4</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #408080; font-style: italic">//attach interrupt to Bass input pin</span>
@@ -593,7 +593,7 @@ BeatCntr <span style="color: #666666">=</span> <span style="color: #666666">0</s
 							
 							<p>Function that sets ISR flag:</p>
 
-							<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
+							<div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
 2
 3
 4</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #408080; font-style: italic">//ISR function</span>
@@ -628,6 +628,10 @@ BeatCntr <span style="color: #666666">=</span> <span style="color: #666666">0</s
 							<h2>Transmission </h2>
 							<h2>General project planning</h2>
 
+-->
+<!--Code HTML generated using hilite.me -->
+							<h1>Read the full report:</h1>
+							<a href="#">Bass-Boosted Dubstep Visualizer.PDF</a>
 
 						</div>
 					</div>
