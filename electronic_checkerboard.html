@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Billy Koech Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<!-- Note: The "styleN" class below should match that of the banner element. -->
+					<header id="header" class="alt style2">
+						<a href="index.html" class="logo">
+							<strong>Billy</strong> <span>Koech</span>
+							&#9865;
+							<strong>Maker</strong> <span>Porfolio</span>
+						</a>
+						
+						<span style="text-indent :5em;">Engineering</span>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Engineering </a></li>
+							<li><a href="index.html">Design</a></li>
+							<li><a href="index.html">Papers</a></li>
+							<li><a href="index.html">Art</a></li>
+							<li><a href="index.html">About Me</a></li>
+						</ul>
+					</nav>
+
+				<!-- Banner -->
+				<!-- Note: The "styleN" class below should match that of the header element. -->
+					<section id="banner" class="style2">
+						<div class="inner">
+							<span class="image">
+								<img src="engineering_content/dry_erase_printer/header.jpeg" alt="" />
+							</span>
+							<header class="major">
+								<h1>Electronic Checkerboard</h1>
+							</header>
+							<div class="content">
+								<p>
+									Description: Electronic implementation of the game checkers using push buttons, LEDs, resistors, shift registers and a microcontroller
+									<br/>Date: Fall 2016
+									<br/> Location: Harvard
+									<br/>Software, Tools, Equipment: Arduino C, Breadboarding
+									<br/>Contributers: Billy Koech, Victor Yang, Ryan Wood, Sean Park
+								</p>
+							</div>
+						</div>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+								<div class="row gtr-50 gtr-uniform">
+															<div class="col-4"><span class="image fit"><img src="engineering_content/dry_erase_printer/1.jpeg" alt="" /></span></div>
+															<div class="col-4"><span class="image fit"><img src="engineering_content/dry_erase_printer/2.jpeg" alt="" /></span></div>
+															<div class="col-4"><span class="image fit"><img src="engineering_content/dry_erase_printer/3.jpeg" alt="" /></span></div>
+															
+														</div>
+								<div class="inner">
+									<header class="major">
+										<h2>Overview</h2>
+									</header>
+									<p> This is an electronic checkerboard controlled using an Arduino
+									microcontroller and powered using a single 9V battery. It allows two users to play the
+									game of checkers, much like you would on a normal cardboard board. Each of 32 squares
+									on the board contains an RGB LED and a push button to dictate to the board which piece
+									to move and where. These two elements are wired through different circuits. Due to
+									limits on the number of pins on the Arduino, creativity was used to control all 32 LEDs
+									and push buttons. For the LEDs, two sets of four daisy-chained SN74HC595 shift
+									registers write a 32-bit binary number to the board, where each bit controls the LED for
+									one square, and the two sets of shift registers control red and blue colors for each player.
+									For the push buttons, 8 of them are connected in series, with one side of the buttons
+									shorted (connected to one Arduino analog input pin) and the other side containing a 2.2k
+									Ohm resistor between each button (connected to power)2. In this way, when power is on
+									and a button is pressed, each button opens a circuit with a different amount of resistance,
+									causing a different voltage to be read by the Arduino. The problem with this idea is that
+									two buttons cannot be pressed at the same time, but that should never happen in a
+									checkers game.
+
+							</p>
+
+
+							<span class="image fit">
+							 
+
+							<iframe class="image fit" height="600" src="https://www.youtube.com/embed/aOA-SB12XFA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</span>
+													<div class="box alt">
+														<div class="row gtr-50 gtr-uniform">
+															<div class="col-4"><span class="image fit"><img src="engineering_content/dry_erase_printer/4.jpeg" alt="" /></span></div>
+															<div class="col-4"><span class="image fit"><img src="engineering_content/dry_erase_printer/5.jpeg" alt="" /></span></div>
+															<div class="col-4"><span class="image fit"><img src="engineering_content/dry_erase_printer/6.jpeg" alt="" /></span></div>
+															
+														</div>
+													</div>
+							
+							<p>
+								The video and images above show the operation of the device.
+							</p>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two" class="spotlights">
+								<section>
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/oS5ywfKJ33A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>Testing the LEDs</h3>
+											</header>
+											<p>Cycling through the LEDs to test the correctness of the wiring</p>
+											<ul class="actions">
+												<li><a href="papers_content/Team05_ES50_Final_Project_Report_2016.pdf" class="button">Learn more</a></li>
+											</ul>
+										</div>
+									</div>
+								</section>
+								
+								
+							</section>
+
+							
+
+
+						<!-- Three -->
+							<section id="three">
+								<div class="inner">
+									<header class="major">
+										<h2>Documentation</h2>
+									</header>
+									<p>Read the full report below:</p>
+									<ul class="actions">
+										<li><a href="papers_content/Team05_ES50_Final_Project_Report_2016.pdf" class="button next">Read</a></li>
+									</ul>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="https://github.com/kimkoech" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/billy-koech-655576173" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li><a href="tel:6177106745" class="icon solid alt fa-phone"><span class="label">Phone</span></a></li>
+								<li><a href="mailto:bkkoech@college.harvad.edu" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>Billy Koech</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
