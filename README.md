@@ -3,6 +3,8 @@ Personal portfolio for projects, designs, art and other things
 
 
 ## Engineering Projects
+- Senior capstone project
+- Digging deep: EWB Kibuon
 - Personal Electric Vehicle
 - Bass boosted dubstep visualizer
 - Dry Erase Printer
@@ -28,11 +30,12 @@ Personal portfolio for projects, designs, art and other things
 
 
 ## About me
-- Add bio
+- Updated
 
 
-## Paper
-- Update thesis draft upon completion
+## Papers
+- Undegraduate thesis
+- 
 
 
 
