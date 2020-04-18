@@ -11,9 +11,10 @@ Personal portfolio for projects, designs, art and other things
 - Electronic Checkerboard
 - Hanger Analyitics
 - Valve box design
+- Hand Wired Keyboard
 
 ### Todo
-- Hand Wired Keyboard
+- Autonomous OG Mapper
 - Website updater
 - Bluetooth Aux device
 - Shiftboard Handler
